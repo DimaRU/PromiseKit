@@ -3,9 +3,6 @@
 import PackageDescription
 
 let pkg = Package(name: "PromiseKit")
-pkg.platforms = [
-   .macOS(.v10_10), .iOS(.v9), .tvOS(.v9), .watchOS(.v2)
-]
 pkg.products = [
     .library(name: "PromiseKit", targets: ["PromiseKit"]),
 ]
@@ -23,7 +20,8 @@ pmk.exclude = [
     "after.m",
     "hang.m",
     "race.m",
-    "Deprecations.swift"
+    "Deprecations.swift",
+    "Info.plist"
 ]
 pkg.swiftLanguageVersions = [.v5]
 pkg.targets = [
